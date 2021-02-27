@@ -15,6 +15,13 @@ spec:
       containers:
         - name: auth
           image: ashtar23/auth
+          env:
+            - name: JWT_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: ticketing-config-env
+                  key: JWT_KEY
+
 ---
 apiVersion: v1
 kind: Service
