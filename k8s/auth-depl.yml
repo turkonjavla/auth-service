@@ -21,6 +21,11 @@ spec:
                 configMapKeyRef:
                   name: ticketing-config-env
                   key: JWT_KEY
+            - name: AUTH_MONGO_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: ticketing-config-env
+                  key: AUTH_MONGO_URI
 
 ---
 apiVersion: v1
